@@ -1,0 +1,21 @@
+This PlantUML code represents a mango leaf disease detection project. Here's a breakdown of the code:
+
+Importing Libraries: The code begins by importing various libraries necessary for the project, such as gdown, pandas, numpy, seaborn, matplotlib.pyplot, tensorflow, mpimg, ImageDataGenerator, tensorflow_hub, keras, Model, Sequential, Input, Dense, Flatten, GlobalAveragePooling2D, Reshape, LSTM, Conv2D, MaxPooling2D, CategoricalCrossentropy, Adam, and MobileNetV2.
+
+Data Preprocessing: The code performs data preprocessing steps using the ImageDataGenerator class from TensorFlow. It applies transformations such as samplewise centering, rotation, zooming, shifting, flipping, and rescaling on the image data.
+
+Loading and Preparing Dataset: The code loads and prepares the mango leaf dataset. It retrieves the directory path, lists the labels (leaf disease categories), and displays a sample image from each category.
+
+Custom CNN Model: The code defines a custom CNN model using the Sequential class from Keras. It consists of multiple convolutional and pooling layers followed by fully connected layers.
+
+VGG16 Model: The code loads a pre-trained VGG16 model, freezes its layers, and adds additional layers on top for fine-tuning.
+
+Model Compilation and Training: The code compiles both the custom CNN model and the VGG16 model using appropriate loss functions and optimizers. It then trains the models using the prepared training and validation data.
+
+Model Evaluation: The code uses the trained models to make predictions on the test data and calculates the classification report using the sklearn.metrics.classification_report function.
+
+Real-time Classification with Webcam: The code defines a function to capture webcam frames, preprocess the frames, and classify them using the trained model. It uses OpenCV for capturing frames and overlays the predicted class label on the frames. It displays the webcam feed with real-time predictions.
+
+Gradio Interface: The code sets up a Gradio interface, which allows users to interact with the model by capturing webcam images and seeing the predicted class label. It uses the Gradio library to create the interface.
+
+Overall, this code demonstrates the process of building, training, and evaluating models for mango leaf disease detection. It also showcases the integration of a real-time classification interface using a webcam.
